@@ -94,12 +94,10 @@ img {
 .active {
 	opacity: 1;
 }
-#title,
-#demo {
-	background: url(images/death-star-laser-outline.png) no-repeat top 0 right 0 #000;
+#title {
+	background: url(images/death-star-laser-white-outline.png) no-repeat top 0 right 0 #000;
 }
-#title h1, #title h2, #title h3, #title h3 a,
-#demo h1, #demo h2, #demo h3, #demo h3 a, #demo a {
+#title h1, #title h2, #title h3, #title h3 a {
 	color: #fff;
 }
 #title h1 {
@@ -250,10 +248,17 @@ iframe {
 #polyfills a  {
 	color: $dark-text;
 }
+#demo {
+	background: url(images/death-star-laser-black-outline.png) no-repeat top 0 right 0 #fff;
+	color: $dark-text;
+}
 #demo p {
 	bottom: 80px;
 	left: 20px;
 	position: absolute;
+}
+#demo a {
+	color: $dark-text;
 }
 #final {
 	background: $blue;
