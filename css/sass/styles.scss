@@ -1,0 +1,267 @@
+/* http://www.colourlovers.com/palette/199192/Bulcom */
+$blue: rgb(5,52,158);
+$red: rgb(228,34,0);
+$orange: rgb(238,58,35);
+$light-green: rgb(181,220,16);
+$green: rgb(127,195,28);
+$bg-color: rgb(221,221,221);
+$grey: rgb(166,162,162);
+$dark-text: #333;
+$light-text: #ddd;
+$slide-height: 688px;
+$slide-width: 954px;
+
+body {
+	background: $bg-color;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+code, .code {
+	border-radius: 10px;
+	font-family: 'Source Code Pro', sans-serif;
+	font-size: 26px;
+}
+ul, ol, p {
+	font-size: 48px;
+}
+ol {
+	margin-left: 2em;
+}
+li {
+	margin: .4em 0;
+}
+img {
+	max-height: $slide-height;
+	max-width: $slide-width;
+}
+.bh {
+	font-size: 80px;
+	margin: 0;
+}
+.mh {
+	font-size: 60px;
+	margin: 0;
+}
+.med,
+.big,
+.large,
+.huge,
+.gigantic {
+	margin: 0;
+	/* text-align: center; */
+}
+.med,
+.code-example .big,
+.code-example .large,
+.code-example .huge,
+.code-example .gigantic {
+	text-align: left;
+}
+.med {
+	font-size: 50px;
+}
+.big {
+	font-size: 70px;
+}
+.large {
+	font-size: 100px;
+}
+.huge {
+	font-size: 250px;
+}
+.gigantic {
+	font-size: 350px;
+}
+.slide {
+	background: #000;
+	border-radius: 20px;
+	box-shadow:  2px 2px 3px 3px rgba(0, 0, 0, .1);
+	height: $slide-height;
+	opacity: 0;
+	overflow: hidden;
+	padding: 20px;
+	/*
+	-webkit-transition: opacity .4s ease;
+	-moz-transition: opacity .4s ease;
+    -ms-transition: opacity .4s ease;
+    -o-transition: opacity .4s ease;
+	transition: opacity .4s ease;
+	*/
+	width: $slide-width;
+	word-wrap: break-word;
+}
+.active {
+	opacity: 1;
+}
+#title,
+#demo {
+	background: url(images/death-star-laser-outline.png) no-repeat top 0 right 0 #000;
+}
+#title h1, #title h2, #title h3, #title h3 a,
+#demo h1, #demo h2, #demo h3, #demo h3 a, #demo a {
+	color: #fff;
+}
+#title h1 {
+	font-size: 300%;
+	width: 45%;
+}
+#title h2 {
+	font-size: 200%;
+	margin-top: 180px;
+}
+#title h3 {
+	font-size: 150%;
+}
+#title h3 a {
+	text-decoration: none;
+}
+iframe {
+	display: block;
+	margin: 0 auto;
+}
+#introduction {
+	background: $blue;
+}
+#introduction h2 {
+	color: #fff;
+	font-size: 400%;
+	left: 20px;
+	position: absolute;
+	top: 20px;
+	width: 30%;
+}
+#introduction img {
+	float: right;
+	width: 60%;
+}
+#http {
+	/* background: url(images/truck.png) no-repeat top 0 right 0 #fff; */
+	background: $green;
+	color: $dark-text;
+}
+#http h2 {
+	font-size: 370px;
+	margin: 120px auto 0 auto;
+	text-align: center;
+	width: 95%;
+}
+.http {
+	background: #fff;
+}
+.http img {
+	display: block;
+	margin: 20px auto;
+}
+#alternatives {
+	background: $light-green;
+}
+#alternatives h2 {
+	font-size: 170px;
+}
+#ajax {
+	background: url(images/ajax-logo.png) no-repeat top 30px right 30px #2F54A5;
+}
+#polling {
+	background: url(images/polling.png) no-repeat top 0 right 0 #fff;
+}
+.attribution {
+	color: #fff;
+	font-size: 16px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+.attribution a {
+	color: #fff;
+}
+#comet {
+	background: url(images/comet.jpg) no-repeat top 0 right 0 #fff;
+}
+#comet-2 {
+	background: url(images/comet-cleaner.png) no-repeat top 0 right 0 #fff;
+}
+#comet-2 h2 {
+	font-size: 80px;
+	line-height: 1em;
+	margin: 0;
+	width: 40%;
+}
+#comet-2 ul {
+	font-size: 35px;
+}
+#comet-2 .attribution a {
+	background: #ccc;
+	color: #000;
+}
+/*
+#streaming {
+	background: url(images/stream.png) no-repeat top 0 right 0 #3584D8;
+}
+#streaming h2 {
+	font-size: 80px;
+	line-height: 1em;
+	margin: 0 auto;
+	text-align: center;
+}
+*/
+.streaming {
+	background: $green;
+	color: $blue;
+}
+.cons {
+	background: $red;
+	color: $light-text;
+}
+.sockets {
+	background: $green;
+	color: $dark-text;
+}
+.back-end-options {
+	background: $green;
+	color: $dark-text;
+}
+.back-end-options h3 {
+	font-size: 40px;
+	margin: .2em 0;
+}
+.back-end-options ul {
+	list-style: none;
+}
+.back-end-options ul ul {
+	list-style: disc;
+	margin: .2em 0 0 1em;
+}
+.back-end-options a {
+	color: $dark-text;
+}
+.api {
+	background: $blue;
+	color: $light-text;
+}
+.code-example {
+	background: $blue;
+	color: $light-text;
+}
+#polyfills {
+	background: $light-green;
+	color: $dark-text;
+}
+#polyfills a  {
+	color: $dark-text;
+}
+#demo p {
+	bottom: 80px;
+	left: 20px;
+	position: absolute;
+}
+#final {
+	background: $blue;
+	color: $light-text;
+}
+#final li {
+	font-size: 45px;
+}
+#final a {
+	color: $light-text;
+}
