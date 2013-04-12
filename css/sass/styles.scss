@@ -30,6 +30,7 @@ code, .code {
 	font-size: 25px;
 }
 .handwriting {
+	color: #999;
 	font-family: 'Nothing You Could Do', cursive;
 }
 ul, ol,  p {
@@ -287,6 +288,9 @@ iframe {
 #websocket-protocol {
 	background: url(images/protocol-droid.jpg) top right no-repeat #fff;
 }
+#websocket-protocol p {
+	width: 45%;
+}
 #polyfills {
 	background: $light-orange;
 	color: $dark-text;
@@ -302,8 +306,8 @@ iframe {
 	background: url(images/death-star-laser-black-outline.png) no-repeat top 0 right 0 #fff;
 	color: $dark-text;
 }
-#demo p {
-	bottom: 80px;
+#demo ul {
+	bottom: 0;
 	left: 20px;
 	position: absolute;
 }
