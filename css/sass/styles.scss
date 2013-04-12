@@ -1,0 +1,325 @@
+/* http://www.colourlovers.com/business/trends/branding/7880/Papeterie_Haute-Ville_Logo */
+$dark-blue: rgb(17,63,140);
+$turquoise: rgb(1,164,164);
+$blue: rgb(0,161,203);
+$green: rgb(97,174,36);
+$light-green: rgb(208,209,2);
+$dark-green: rgb(50,116,44);
+$red: rgb(215,0,96);
+$orange: rgb(229,64,40);
+$light-orange: rgb(241,141,5);
+$grey: rgb(166,162,162);
+$dark-grey: rgb(97,97,97);
+$bg-color: rgb(221,221,221);
+$dark-text: #333;
+$light-text: #ddd;
+$slide-height: 668px;
+$slide-width: 934px;
+$slide-width-minus-padding: 894px;
+$slide-padding: 40px;
+
+body {
+	background: $bg-color;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+code, .code {
+	border-radius: 10px;
+	font-family: 'Source Code Pro', sans-serif;
+	font-size: 25px;
+}
+.handwriting {
+	color: #999;
+	font-family: 'Nothing You Could Do', cursive;
+}
+ul, ol,  p {
+	font-size: 48px;
+}
+dl {
+	font-size: 40px;
+	margin: 1em 0;
+}
+dt {
+	font-weight: bold;
+}
+ol {
+	margin-left: 2em;
+}
+li {
+	margin: .4em 0;
+}
+img {
+	max-height: $slide-height;
+	max-width: $slide-width;
+}
+table {
+	background: $bg-color;
+	border-radius: 10px;
+	color: $dark-text;
+	font-size: 40px;
+	margin-top: 20px;
+	width: 100%;
+}
+th {
+	text-align: left;
+}
+tr {
+	border-top: 1px solid $dark-text;
+}
+td, th {
+	padding: .125em;
+}
+.bh {
+	font-size: 80px;
+	margin: 0;
+}
+.mh {
+	font-size: 60px;
+	margin: 0;
+}
+.med,
+.big,
+.large,
+.huge,
+.gigantic {
+	letter-spacing: 3px;
+	margin: 0;
+	/* text-align: center; */
+}
+.med,
+.code-example .big,
+.code-example .large,
+.code-example .huge,
+.code-example .gigantic {
+	text-align: left;
+}
+.med {
+	font-size: 50px;
+}
+.big {
+	font-size: 65px;
+}
+.large {
+	font-size: 100px;
+}
+.huge {
+	font-size: 250px;
+}
+.gigantic {
+	font-size: 350px;
+}
+.slide {
+	background: #000;
+	border-radius: 20px;
+	box-shadow:  2px 2px 3px 3px rgba(0, 0, 0, .1);
+	height: $slide-height;
+	opacity: 0;
+	overflow: hidden;
+	padding: $slide-padding;
+	width: $slide-width;
+	word-wrap: break-word;
+}
+.active {
+	opacity: 1;
+}
+#title {
+	background: url(images/death-star-laser-white-outline.png) no-repeat top 0 right 0 #000;
+}
+#title h1, #title h2, #title h3, #title h3 a {
+	color: #fff;
+}
+#title h1 {
+	font-size: 300%;
+	width: 45%;
+}
+#title h2 {
+	font-size: 200%;
+	margin-top: 180px;
+}
+#title h3 {
+	font-size: 150%;
+}
+#title h3 a {
+	text-decoration: none;
+}
+iframe {
+	display: block;
+	margin: 0 auto;
+}
+#introduction {
+	background: $dark-blue;
+}
+#introduction h2 {
+	color: #fff;
+	font-size: 400%;
+	left: 20px;
+	position: absolute;
+	top: 20px;
+	width: 30%;
+}
+#introduction img {
+	float: right;
+	width: 60%;
+}
+#beardcicle-pointer {
+	bottom: -20px;
+	color: $light-text;
+	position: absolute;
+	right: 250px;
+}
+.http {
+	background: #fff;
+}
+.http a {
+	color: $dark-text;
+}
+.http img {
+	display: block;
+	margin: 20px auto;
+}
+.alternatives {
+	background: $turquoise;
+}
+#alternatives h2 {
+	font-size: 165px;
+}
+#polling {
+	background: url(images/polling.png) 0 0 no-repeat;
+}
+#polling .handwriting {
+	background: rgba(0,0,0,.5);
+	border-radius: 5px;
+	bottom: 0;
+	color: $light-text;
+	padding: .5em;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	width: 600px;
+}
+#comet {
+	background: url(images/comet-cleaner.png) 0 0 no-repeat;
+	color: $dark-text;
+}
+#comet h2 {
+	line-height: 1;
+}
+#comet ul {
+	font-size: 35px;
+}
+.streaming {
+	background: url(images/droids.png) 0 0 no-repeat;
+}
+.streaming .handwriting {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 55%;
+}
+.streaming .handwriting.response {
+	font-size: 100px;
+	right: 50px;
+	width: 220px;
+}
+.cons {
+	background: url(images/stoplight.png) 0 0 no-repeat $red;
+	color: $dark-text;
+}
+.cons .attribution a {
+	background: rgba(0,0,0,.5);
+	color: $light-text;
+	padding: 3px;
+}
+.sockets {
+	background: url(images/gl.png) 0 0 no-repeat $blue;
+	color: $dark-text;
+}
+.sockets .attribution a {
+	background: $light-text;
+	padding: .2em;
+}
+.back-end-options {
+	background: $light-green;
+	color: $dark-text;
+}
+.back-end-options h3 {
+	margin: .2em 0;
+}
+.back-end-options ul {
+	list-style: none;
+}
+.back-end-options ul ul {
+	list-style: disc;
+	margin: .2em 0 0 1em;
+}
+.back-end-options a {
+	color: $dark-text;
+}
+#caniuse {
+	background: $turquoise;
+	color: $dark-text;
+}
+#caniuse a {
+	color: $dark-text;
+}
+#cannotuse {
+	background: url(images/android.png) 400px 40px no-repeat $turquoise;
+}
+.api {
+	background: $green;
+}
+.code-example {
+	background: $green;
+	color: $dark-text;
+}
+.code-example a {
+	color: $dark-text;
+}
+.attribution {
+	bottom: 0;
+	font-size: 16px;
+	position: absolute;
+	right: 40px;
+}
+.attribution a {
+	color: $dark-text;
+}
+#websocket-protocol {
+	background: url(images/protocol-droid.jpg) top right no-repeat #fff;
+}
+#websocket-protocol p {
+	width: 45%;
+}
+#polyfills {
+	background: $light-orange;
+	color: $dark-text;
+}
+#polyfills a  {
+	color: $dark-text;
+}
+#polyfills dd,
+#final dd {
+	margin-bottom: 1em;
+}
+#demo {
+	background: url(images/death-star-laser-black-outline.png) no-repeat top 0 right 0 #fff;
+	color: $dark-text;
+}
+#demo ul {
+	bottom: 0;
+	left: 20px;
+	position: absolute;
+}
+#demo a {
+	color: $dark-text;
+}
+#final {
+	background: $light-orange;
+}
+#final li {
+	font-size: 45px;
+}
+#final a {
+	color: $dark-text;
+}

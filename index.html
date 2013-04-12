@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">	
+	<title>WebSocket</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/normalize.css" rel="stylesheet" media="all">
+	<link href="css/substratum-minified.css" rel="stylesheet" media="all">
+	<link href="css/styles.css" rel="stylesheet" media="all">	
+	<link href="js/highlight.js/styles/github.css" rel="stylesheet" media="all">	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Source+Code+Pro|Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
+</head>
+<body>
+	<div id="impress">
+		<!-- title -->
+		<div id="title" class="step slide" data-x="0" data-y="0">
+			<hgroup>
+				<h1 class="large">Witness the Power of This Fully Armed and Operational Website</h1>
+				<h2>The Emerging Power of WebSockets</h2>
+				<h3>Tony Thomas (<a href="http://twitter.com/truetone">@truetone</a>)</h3>
+			</hgroup>
+		</div>
+		<!-- introduction -->
+		<div id="introduction" class="step slide" data-x="0" data-y="0">
+			<h2>Who Am I?</h2>
+			<p><img src="images/tony.jpg" alt="Tony w/ ice beard.">
+			<p id="beardcicle-pointer" class="handwriting">(Beardcicles) &uarr;
+		</div>
+		<!-- websocket protocol -->
+		<div id="websocket-protocol" class="step slide http" data-x="0" data-y="0">
+			<h2 class="big">WebSocket is a protocol</h2>
+			<dl>
+				<dt>RFC 6455</dt>
+				<dd>tools.ietf.org/html/rfc6455</dd>
+			</dl>
+			<p id="pd-note" class="handwriting">(Protocol Droid) &rarr;
+			<p>Can be a transport layer for higher level protocols.
+
+			<p class="attribution"><a href="http://www.flickr.com/photos/theshadowknows/2632911477/">flickr.com/photos/theshadowknows/2632911477/</a>
+		</div>
+		<!-- http -->
+		<div id="http" class="step slide http" data-x="0" data-y="0">
+			<div class="column">
+				<h2 class="bh">HTTP</h2>
+			</div>
+			<div class="column last">
+				<a href="http://www.flickr.com/photos/clarkmaxwell/5526286040/" title="push to talk. by clarkmaxwell, on Flickr"><img src="http://farm6.staticflickr.com/5135/5526286040_3524e7032b_z.jpg" width="343" height="640" alt="push to talk."></a>
+			</div>
+		</div>
+		<!-- http 2 -->
+		<div id="http-2" class="step slide http" data-x="0" data-y="0">
+			<div class="column">
+				<hgroup>
+					<h2 class="bh">HTTP</h2>
+					<h3 class="mh">Half-duplex<h3>
+				</hgroup>
+			</div>
+			<div class="column last">
+				<a href="http://www.flickr.com/photos/clarkmaxwell/5526286040/" title="push to talk. by clarkmaxwell, on Flickr"><img src="http://farm6.staticflickr.com/5135/5526286040_3524e7032b_z.jpg" width="343" height="640" alt="push to talk."></a>
+			</div>
+		</div>
+		<!-- http 3 -->
+		<div id="http-3" class="step slide http" data-x="0" data-y="0">
+			<div class="column">
+				<hgroup>
+					<h2 class="bh">HTTP</h2>
+					<h3 class="mh">Half-duplex<h3>
+				</hgroup>
+				<ul>
+					<li>Request</li>
+					<li>Response</li>
+				</ul>
+			</div>
+			<div class="column last">
+				<a href="http://www.flickr.com/photos/clarkmaxwell/5526286040/" title="push to talk. by clarkmaxwell, on Flickr"><img src="http://farm6.staticflickr.com/5135/5526286040_3524e7032b_z.jpg" width="343" height="640" alt="push to talk."></a>
+			</div>
+		</div>
+		<!-- http 4 -->
+		<div id="http-4" class="step slide http" data-x="0" data-y="0">
+			<div class="column">
+				<hgroup>
+					<h2 class="bh">HTTP</h2>
+					<h3 class="mh">Half-duplex<h3>
+				</hgroup>
+				<ul>
+					<li>Request</li>
+					<li>Response</li>
+					<li>Uni-directional</li>
+				</ul>
+			</div>
+			<div class="column last">
+				<a href="http://www.flickr.com/photos/clarkmaxwell/5526286040/" title="push to talk. by clarkmaxwell, on Flickr"><img src="http://farm6.staticflickr.com/5135/5526286040_3524e7032b_z.jpg" width="343" height="640" alt="push to talk."></a>
+			</div>
+		</div>
+		<!-- alternatives -->
+		<div id="alternatives" class="step slide alternatives" data-x="0" data-y="0">
+			<h2>Alternatives</h2>
+		</div>
+		<!-- polling -->
+		<div id="polling" class="step slide alternatives" data-x="0" data-y="0">
+			<!-- <h2 class="large">Polling</h2> -->
+			<p class="handwriting">Client sends requests at regular intervals.
+		</div>
+		<!-- comet -->
+		<div id="comet" class="step slide alternatives" data-x="0" data-y="0">
+			<h2 class="large">Comet</h2>
+			<h3 class="big">Also called...</h3>
+			<ul>
+				<li>Ajax Push</li>
+				<li>Reverse Ajax</li>
+				<li>Two-way-web</li>
+				<li>HTTP Streaming</li>
+				<li>HTTP server push</li>
+			</ul>
+		</div>
+		<!-- streaming -->
+		<div id="streaming" class="step slide streaming alternatives" data-x="0" data-y="0">
+			<h2 class="bh">Streaming</h2>
+			<!-- <p class="attribution"><a href="http://www.flickr.com/photos/mait/6284292323/">flickr.com/photos/mait/6284292323/</a> -->
+		</div>
+		<!-- streaming 2 -->
+		<div id="streaming-2" class="step slide streaming alternatives" data-x="0" data-y="0">
+			<h2 class="bh">Streaming</h2>
+			<h3 class="mh">Client Request</h3>
+			<p class="big handwriting">("Are you the droids I'm looking for?" &darr;)
+			<p class="attribution"><a href="http://www.flickr.com/photos/ahnmyrrh/3614424232/">flickr.com/photos/ahnmyrrh/3614424232</a>
+		</div>
+		<!-- streaming 3 -->
+		<div id="streaming-3" class="step slide streaming alternatives" data-x="0" data-y="0">
+			<h2 class="bh">Streaming</h2>
+			<h3 class="mh">Server Response</h3>
+			<p class="handwriting response">(Yes...)
+			<p class="attribution"><a href="http://www.flickr.com/photos/ahnmyrrh/3614424232/">flickr.com/photos/ahnmyrrh/3614424232</a>
+		</div>
+		<!-- streaming 4 -->
+		<!-- 
+		<div id="streaming-4" class="step slide streaming alternatives" data-x="0" data-y="0">
+			<h2 class="bh">Streaming</h2>
+			<h3 class="mh">Server Response</h3>
+			<p class="mh">Yes.................................................................................................................................................................................................................................................................................................................................................................................................................................................
+		</div>
+		-->
+		<!-- cons 1 -->
+		<div id="cons-1" class="step slide cons" data-x="0" data-y="0">
+			<h2 class="large">Cons</h2>
+			<ul>
+				<li>Extra overhead</li>
+			</ul>
+			<p class="attribution"><a href="http://www.flickr.com/photos/nhanusek/415210671/">flickr.com/photos/nhanusek/415210671/</a>
+		</div>
+		<div id="cons-2" class="step slide cons" data-x="0" data-y="0">
+			<h2 class="large">Cons</h2>
+			<ul>
+				<li>Extra overhead</li>
+				<li>Latency</li>
+			</ul>
+			<p class="attribution"><a href="http://www.flickr.com/photos/nhanusek/415210671/">flickr.com/photos/nhanusek/415210671/</a>
+		</div>
+		<div id="cons-3" class="step slide cons" data-x="0" data-y="0">
+			<h2 class="large">Cons</h2>
+			<ul>
+				<li>Extra overhead</li>
+				<li>Latency</li>
+				<li>Half-duplex</li>
+			</ul>
+			<p class="attribution"><a href="http://www.flickr.com/photos/nhanusek/415210671/">flickr.com/photos/nhanusek/415210671/</a>
+		</div>
+		<div id="cons-4" class="step slide cons" data-x="0" data-y="0">
+			<h2 class="large">Cons</h2>
+			<ul>
+				<li>Extra overhead</li>
+				<li>Latency</li>
+				<li>Half-duplex</li>
+				<li>No standards</li>
+			</ul>
+			<p class="attribution"><a href="http://www.flickr.com/photos/nhanusek/415210671/">flickr.com/photos/nhanusek/415210671/</a>
+		</div>
+		<div id="websockets-1" class="step slide sockets" data-x="0" data-y="0">
+			<h2 class="large">WebSocket</h2>
+			<p class="attribution"><a href="http://www.flickr.com/photos/borkurdotnet/5168835597/">flickr.com/photos/borkurdotnet/5168835597/</a>
+		</div>
+		<div id="websockets-2" class="step slide sockets" data-x="0" data-y="0">
+			<h2 class="large">WebSocket</h2>
+			<ul>
+				<li>HTML5 Standard</li>
+			</ul>
+			<p class="attribution"><a href="http://www.flickr.com/photos/borkurdotnet/5168835597/">flickr.com/photos/borkurdotnet/5168835597/</a>
+		</div>
+		<div id="websockets-3" class="step slide sockets" data-x="0" data-y="0">
+			<h2 class="large">WebSocket</h2>
+			<ul>
+				<li>HTML5 Standard</li>
+				<li>Full-duplex</li>
+			</ul>
+			<p class="attribution"><a href="http://www.flickr.com/photos/borkurdotnet/5168835597/">flickr.com/photos/borkurdotnet/5168835597/</a>
+		</div>
+		<div id="websockets-4" class="step slide sockets" data-x="0" data-y="0">
+			<h2 class="large">WebSocket</h2>
+			<ul>
+				<li>HTML5 Standard</li>
+				<li>Full-duplex</li>
+				<li>Low-latency</li>
+			</ul>
+			<p class="attribution"><a href="http://www.flickr.com/photos/borkurdotnet/5168835597/">flickr.com/photos/borkurdotnet/5168835597/</a>
+		</div>
+		<div id="websockets-5" class="step slide sockets" data-x="0" data-y="0">
+			<h2 class="large">WebSocket</h2>
+			<ul>
+				<li>HTML5 Standard</li>
+				<li>Full-duplex</li>
+				<li>Low-latency</li>
+				<li>Less overhead</li>
+			</ul>
+			<p class="attribution"><a href="http://www.flickr.com/photos/borkurdotnet/5168835597/">flickr.com/photos/borkurdotnet/5168835597/</a>
+		</div>
+		<div id="back-end" class="step slide back-end-options" data-x="0" data-y="0">
+			<h2 class="large">Back End Options</h2>
+			<div class="column first">
+				<h3 class="big">Node.js</h3>
+				<dl>
+					<dt>Socket IO</dt>
+					<dd><a href="http://socket.io/">socket.io</a></dd>
+				</dl>
+				<h3 class="big">PHP</h3>
+				<dl>
+					<dt>Ratchet</dt>
+					<dd><a href="http://socketo.me/">socketo.me</a></dd>
+				</dl>
+			</div>
+			<div class="column last">
+				<h3 class="big">Python</h3>
+				<dl>
+					<dt>Autobahn</dt>
+					<dd><a href="http://autobahn.ws/">autobahn.ws</a></dd>
+				</dl>
+				<h3 class="big">Ruby</h3>
+				<dl>
+					<dt>Faye</dt>
+					<dd><a href="http://faye.jcoglan.com/">faye.jcoglan.com</a></dd>
+				</dl>
+			</div>
+		</div>
+		<div id="caniuse" class="step slide" data-x="0" data-y="0">
+			<h2 class="big">Browser Support</h2>
+			<ul>
+				<li>IE 10 &amp; &gt;</li>
+				<li>Firefox 19 &amp; &gt;</li>
+				<li>Chrome 24 &amp; &gt;</li>
+				<li>Safari &amp; iOS Safari 6</li>
+				<li>Opera 12.1</li>
+				<li>Blackberry 7 &amp; &gt;</li>
+			<ul>
+			<p><a href="http://caniuse.com/#search=websocket">caniuse.com/#search=websocket</a>
+		</div>
+		<div id="cannotuse" class="step slide" data-x="0" data-y="0">
+			<h2 class="big">Missing...</h2>
+			<p>Android Browser
+		</div>
+		<div id="api-1" class="step slide api" data-x="0" data-y="0">
+			<h2 class="large">WebSocket API</h2>
+		</div>
+		<div id="api-2" class="step slide api" data-x="0" data-y="0">
+			<h2 class="large">WebSocket API</h2>
+			<ol>
+				<li>Create new WebSocket instance</li>
+			</ol>
+		</div>
+		<div id="api-3" class="step slide api" data-x="0" data-y="0">
+			<h2 class="large">WebSocket API</h2>
+			<ol>
+				<li>Create new WebSocket instance</li>
+				<li>Provide a URL for a new WebSocket connection</li>
+			</ol>
+		</div>
+		<div id="api-4" class="step slide api" data-x="0" data-y="0">
+			<h2 class="large">WebSocket API</h2>
+			<ol>
+				<li>Create new WebSocket instance</li>
+				<li>Provide a URL for a new WebSocket connection</li>
+				<li>HTTP connection is upgraded to WebSocket</li>
+			</ol>
+		</div>
+		<div id="api-5" class="step slide api" data-x="0" data-y="0">
+			<h2 class="large">WebSocket API</h2>
+			<ol>
+				<li>Create new WebSocket instance</li>
+				<li>Provide a URL for a new WebSocket connection</li>
+				<li>HTTP connection is upgraded to WebSocket</li>
+				<li>Start TEH AWESOME!</li>
+			</ol>
+		</div>
+		<div id="support" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Checking For Support</h2>
+			<pre class="javascript">
+				<code>
+if (window.WebSocket) {
+
+	console.log("Just like Beggar's Canyon back home!");
+
+} else {
+
+	console.log("Don't get cocky, kid!");
+
+}
+				</code>
+			</pre>
+		</div>
+		<div id="constructor" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Constructor</h2>
+			<pre class="javascript">
+				<code>
+/* Create new instance */
+var socket = new WebSocket("ws://localhost:9000");
+
+/* Create new instance via secure connection. */
+var secure_socket = new WebSocket("wss://localhost:9000");
+				</code>
+			</pre>
+		</div>
+		<div id="constructor-protocol" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Constructor &amp; Protocol</h2>
+			<pre class="javascript">
+				<code>
+/* Pass an optional protocol parameter */
+var socket = new WebSocket("ws://localhost:9000", "net.fighter.tie");
+
+/* Pass multiple protocols */
+var socket = new WebSocket("ws://localhost:9000", "com.fullyarmedandoperational.laser", "org.wing.x");
+				</code>
+			</pre>
+		</div>
+		<div id="onopen" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Events: Open</h2>
+			<p>Fires as soon as the server responds.
+			<pre class="javascript">
+				<code>
+socket.onopen = function(msg) {   
+
+  console.log('The force is strong with this one.');
+
+}
+				</code>
+			</pre>
+		</div>
+		<div id="onmessage" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Events: Message</h2>
+			<p>Fires upon receiving a message.
+			<pre class="javascript">
+				<code>
+socket.onmessage = function(msg) {
+  if (msg == "Help me Obi Wan. You're my only hope.") {
+
+  	console.log('Get a ride to Mos Eisley.');
+
+  }
+}
+				</code>
+			</pre>
+		</div>
+		<div id="onerror" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Events: Error</h2>
+			<p>Fires when there is an unexpected failure.
+			<pre class="javascript">
+				<code>
+socket.onerror = function(e) {
+
+  console.log("That's no moon!");
+
+}
+				</code>
+			</pre>
+		</div>
+		<div id="onclose" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Events: Close</h2>
+			<p>Fires when the connection closes.
+			<pre class="javascript">
+				<code>
+socket.onclose = function() {
+
+  console.log("as if millions of voices suddenly cried out in terror, and were suddenly silenced...");
+
+}
+				</code>
+			</pre>
+		</div>
+		<div id="send" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Methods: Send</h2>
+			<p>Sends a message to the server.
+			<pre class="javascript">
+				<code>
+var msg = 'Use The Force Luke!';
+
+socket.send(msg);
+				</code>
+			</pre>
+		</div>
+		<div id="close" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Methods: Close</h2>
+			<p>Closes the connection.
+			<pre class="javascript">
+				<code>
+/* Optional arguments */
+var code = 1000;
+var msg = "These are not the droids you're looking for.";
+
+socket.close(code, msg);
+				</code>
+			</pre>
+		</div>
+		<div id="close-codes" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Methods: Close Codes</h2>
+			<table>
+				<tr>
+					<th>Code</th><th>Description</th>
+				</tr>
+				<tr>
+					<td>1000</td><td>Normal Close</td>
+				</tr>
+				<tr>
+					<td>1001</td><td>Going Away</td>
+				</tr>
+				<tr>
+					<td>1002</td><td>Protocol Error</td>
+				</tr>
+				<tr>
+					<td>1003</td><td>Unacceptable Data Type</td>
+				</tr>
+				<tr>
+					<td>1004</td><td>Reserved</td>
+				</tr>
+				<tr>
+					<td>1005</td><td>Reserved</td>
+				</tr>
+				<tr>
+					<td>1006</td><td>Reserved</td>
+				</tr>
+				<tr>
+					<td>1007</td><td>Invalid Data</td>
+				</tr>
+				<tr>
+					<td>1008</td><td>Message Violates Policy</td>
+				</tr>
+			</table>
+		</div>
+		<div id="readstate" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Attributes: readyState</h2>
+			<pre class="javascript">
+				<code>
+var state = socket.readyState;
+
+switch (state) {
+  case 0:
+    console.log('Connecting');
+  case 1:
+    console.log('Open');
+  case 2:
+    console.log('Closing');
+  case 3:
+    console.log('Closed');
+} 
+				</code>
+			</pre>
+		</div>
+		<div id="bufferedamount" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Attributes: bufferedAmount</h2>
+			<p>Data in bytes queued to send to the server.
+			<pre class="javascript">
+				<code>
+var buffer_size = socket.bufferedAmount;
+				</code>
+			</pre>
+		</div>
+		<div id="protocol" class="step slide code-example" data-x="0" data-y="0">
+			<h2 class="big">Attributes: Protocol</h2>
+			<p>The sub-protocol chosen by the server.
+			<pre class="javascript">
+				<code>
+var protocol = socket.protocol;
+				</code>
+			</pre>
+		</div>
+		<div id="polyfills" class="step slide" data-x="0" data-y="0">
+			<h2 class="large">Polyfills</h2>
+			<dl>
+				<dt>Graceful Websocket (No Flash)</dt>
+				<dd><a href="https://github.com/ffdead/jquery-graceful-websocket">z.umn.edu/gws</a></dd>
+				<dt>websocket.js (Flash fallback)</dt>
+				<dd><a href="https://github.com/gimite/web-socket-js/">z.umn.edu/wsjs</a></dd>
+				<dt>Modernizr's list</dt>
+				<dd><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills#web-sockets">z.umn.edu/mpf</a></dd>
+			</dl>
+		</div>
+		<div id="demo" class="step slide" data-x="0" data-y="0">
+			<h2 class="large">Demo</h2>
+			<ul>
+				<li><a href="http://fullyarmedandoperational.com/section/1">fullyarmedandoperational.com/section/1</a></li>
+				<li><a href="http://fullyarmedandoperational.com/section/2">fullyarmedandoperational.com/section/2</a></li>
+				<li><a href="http://fullyarmedandoperational.com/section/3">fullyarmedandoperational.com/section/3</a></li>
+			</ul>
+		</div>
+		<div id="final" class="step slide" data-x="0" data-y="0">
+			<h2 class="big">The End</h2>
+			<dl>
+				<dt>Mozilla Developer Network</dt>
+				<dd><a href="https://developer.mozilla.org/en-US/docs/WebSockets">z.umn.edu/mdnws</a></dd>
+				<dt>The Definitive Guide to HTML5 WebSocket (Wang, Salim &amp; Moskovits)</dt>
+				<dd><a href="http://www.amazon.com/Definitive-Guide-HTML5-WebSocket-Apress/dp/1430247401/ref=sr_1_1?s=books&ie=UTF8&qid=1365288836&sr=1-1&keywords=definitive+guide+to+html5+websocket">z.umn.edu/dgtws</a></li>
+				<dt>Tony Thomas</dt>
+				<dd><a href="http://twitter.com/truetone">@truetone</a></dd>
+			</dl>
+		</div>
+	</div>
+<!--	
+	<script>
+		var _gaq=[['_setAccount','UA-XXXX-XX'],['_trackPageview']];(function(a,b){var c=a.createElement(b),d=a.getElementsByTagName(b)[0];c.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";d.parentNode.insertBefore(c,d)})(document,"script");
+	</script>
+-->
+	<script src="js/impress.js"></script>
+	<script>impress().init();</script>
+
+	<!-- Syntax highlighting -->
+	<script src="js/highlight.js/highlight.pack.js"></script>
+	<script>
+		hljs.tabReplace = '    ';
+		hljs.initHighlightingOnLoad();
+	</script>
+</body>
+</html>
