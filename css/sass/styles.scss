@@ -110,7 +110,6 @@ td, th {
 	font-size: 350px;
 }
 .slide {
-	background: #000;
 	border-radius: 20px;
 	box-shadow:  2px 2px 3px 3px rgba(0, 0, 0, .1);
 	height: $slide-height;
@@ -273,10 +272,10 @@ iframe {
 	background: url(images/android.png) 400px 40px no-repeat $turquoise;
 }
 .api {
-	background: $green;
+	background: $grey;
 }
 .code-example {
-	background: $green;
+	background: $grey;
 	color: $dark-text;
 }
 .code-example a {
@@ -297,6 +296,11 @@ iframe {
 #websocket-protocol p {
 	width: 45%;
 }
+#websocket-protocol .handwriting {
+	-webkit-transform: rotate(-40deg); 
+	-moz-transform: rotate(-40deg);
+	transform: rotate(-40deg);
+}
 #polyfills {
 	background: $light-orange;
 	color: $dark-text;
@@ -307,6 +311,10 @@ iframe {
 #polyfills dd,
 #final dd {
 	margin-bottom: 1em;
+}
+.graceful-websocket {
+	background: $grey;
+	color: $dark-text;
 }
 #demo {
 	background: url(images/death-star-laser-black-outline.png) no-repeat top 0 right 0 #fff;
@@ -320,6 +328,9 @@ iframe {
 #demo a {
 	color: $dark-text;
 }
+#applications {
+	background: $light-orange;
+}
 #final {
 	background: $light-orange;
 }
@@ -328,4 +339,13 @@ iframe {
 }
 #final a {
 	color: $dark-text;
+}
+#final .handwriting {
+	bottom: 60px;
+	color: $dark-text;
+	position: absolute;
+	right: 60px;
+	-webkit-transform: rotate(-30deg); 
+	-moz-transform: rotate(-30deg);
+	transform: rotate(-30deg);
 }

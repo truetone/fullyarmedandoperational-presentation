@@ -36,8 +36,8 @@
 				<dt>RFC 6455</dt>
 				<dd>tools.ietf.org/html/rfc6455</dd>
 			</dl>
+			<p>Can be a transport layer for higher level protocols like XMPP &amp; STOMP.
 			<p id="pd-note" class="handwriting">(Protocol Droid) &rarr;
-			<p>Can be a transport layer for higher level protocols.
 
 			<p class="attribution"><a href="http://www.flickr.com/photos/theshadowknows/2632911477/">flickr.com/photos/theshadowknows/2632911477/</a>
 		</div>
@@ -254,6 +254,17 @@
 				<li>Blackberry 7 &amp; &gt;</li>
 			<ul>
 			<p><a href="http://caniuse.com/#search=websocket">caniuse.com/#search=websocket</a>
+		</div>
+		<div id="polyfills" class="step slide" data-x="0" data-y="0">
+			<h2 class="large">Polyfills</h2>
+			<dl>
+				<dt>Graceful Websocket (No Flash)</dt>
+				<dd><a href="https://github.com/ffdead/jquery-graceful-websocket">z.umn.edu/gws</a></dd>
+				<dt>websocket.js (Flash fallback)</dt>
+				<dd><a href="https://github.com/gimite/web-socket-js/">z.umn.edu/wsjs</a></dd>
+				<dt>Modernizr's list</dt>
+				<dd><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills#web-sockets">z.umn.edu/mpf</a></dd>
+			</dl>
 		</div>
 		<div id="cannotuse" class="step slide" data-x="0" data-y="0">
 			<h2 class="big">Missing...</h2>
@@ -482,16 +493,36 @@ var protocol = socket.protocol;
 				</code>
 			</pre>
 		</div>
-		<div id="polyfills" class="step slide" data-x="0" data-y="0">
-			<h2 class="large">Polyfills</h2>
-			<dl>
-				<dt>Graceful Websocket (No Flash)</dt>
-				<dd><a href="https://github.com/ffdead/jquery-graceful-websocket">z.umn.edu/gws</a></dd>
-				<dt>websocket.js (Flash fallback)</dt>
-				<dd><a href="https://github.com/gimite/web-socket-js/">z.umn.edu/wsjs</a></dd>
-				<dt>Modernizr's list</dt>
-				<dd><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills#web-sockets">z.umn.edu/mpf</a></dd>
-			</dl>
+		<div id="graceful-websocket-1" class="step slide graceful-websocket" data-x="0" data-y="0">
+			<h2 class="large">Graceful Websocket</h2>
+			<pre class="javascript">
+				<code>
+
+var gws = $.gracefulWebSocket("ws://127.0.0.1:9000/");
+
+				</code>
+			</pre>
+		</div>
+		<div id="graceful-websocket-2" class="step slide graceful-websocket" data-x="0" data-y="0">
+			<h2 class="large">Graceful Websocket</h2>
+			<pre class="javascript">
+				<code>
+
+gws.send("I am your father!");
+
+				</code>
+			</pre>
+		</div>
+		<div id="graceful-websocket-3" class="step slide graceful-websocket" data-x="0" data-y="0">
+			<h2 class="large">Graceful Websocket</h2>
+			<pre class="javascript">
+				<code>
+
+gws.onmessage = function (event) {
+  var messageFromServer = event.data;   
+};
+				</code>
+			</pre>
 		</div>
 		<div id="demo" class="step slide" data-x="0" data-y="0">
 			<h2 class="large">Demo</h2>
@@ -501,6 +532,15 @@ var protocol = socket.protocol;
 				<li><a href="http://fullyarmedandoperational.com/section/3">fullyarmedandoperational.com/section/3</a></li>
 			</ul>
 		</div>
+		<div id="applications" class="step slide" data-x="0" data-y="0">
+			<h2 class="large">Applications</h2>
+			<ul>
+				<li>Chat App</li>
+				<li>Real Time Data</li>
+				<li>Classroom</li>
+				<li>Crowds</li>
+			</ul>
+		</div>
 		<div id="final" class="step slide" data-x="0" data-y="0">
 			<h2 class="big">The End</h2>
 			<dl>
@@ -508,9 +548,12 @@ var protocol = socket.protocol;
 				<dd><a href="https://developer.mozilla.org/en-US/docs/WebSockets">z.umn.edu/mdnws</a></dd>
 				<dt>The Definitive Guide to HTML5 WebSocket (Wang, Salim &amp; Moskovits)</dt>
 				<dd><a href="http://www.amazon.com/Definitive-Guide-HTML5-WebSocket-Apress/dp/1430247401/ref=sr_1_1?s=books&ie=UTF8&qid=1365288836&sr=1-1&keywords=definitive+guide+to+html5+websocket">z.umn.edu/dgtws</a></li>
+				<dt>This Presentation</dt>
+				<dd><a href="http://z.umn.edu/websocket">z.umn.edu/websocket</a></dd>
 				<dt>Tony Thomas</dt>
 				<dd><a href="http://twitter.com/truetone">@truetone</a></dd>
 			</dl>
+			<p class="handwriting">Thanks Ben!
 		</div>
 	</div>
 <!--	
